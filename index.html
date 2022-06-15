@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bài tập thêm JS Buổi 4</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="project">
+      <div class="container py-5">
+        <div class="card mx-auto">
+          <!-- Nav pills -->
+          <ul class="nav nav-pills jutify-content-center">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="pill" href="#bai1"
+                >Bài 1</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#bai2">Bài 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#bai3">Bài 3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#bai4">Bài 4</a>
+            </li>
+          </ul>
+          <hr />
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div class="tab-pane container active" id="bai1">
+              <h3>Tính ngày tháng năm</h3>
+              <p>
+                Viết chương trình nhập vào ngày, tháng, năm (Giả sử nhập đúng,
+                không cần kiểm tra hợp lệ). Tìm ngày, tháng, năm của ngày tiếp
+                theo. Tương tự tìm ngày tháng năm của ngày trước đó.
+              </p>
+              <div class="form-group row">
+                <div class="col-4">
+                  <input
+                    class="form-control"
+                    id="nhapNgay"
+                    placeholder="Nhập ngày"
+                    type="number"
+                  />
+                </div>
+                <div class="col-4">
+                  <input
+                    class="form-control"
+                    id="nhapThang"
+                    placeholder="Nhập tháng"
+                    type="number"
+                  />
+                </div>
+                <div class="col-4">
+                  <input
+                    class="form-control"
+                    id="nhapNam"
+                    placeholder="Nhập năm"
+                    type="number"
+                  />
+                </div>
+                <div class="col-4 mt-2">
+                  <button class="btn btn-primary" id="btnNgayHomQua">
+                    Ngày hôm qua
+                  </button>
+                </div>
+                <div class="col-4 mt-2">
+                  <button class="btn btn-primary" id="btnNgayMai">
+                    Ngày mai
+                  </button>
+                </div>
+              </div>
+              <div
+                class="form-group mt-2 alert alert-success"
+                id="ketQua_b1"
+              ></div>
+            </div>
+            <div class="tab-pane container fade" id="bai2">
+              <h3>Tính ngày</h3>
+              <p>
+                Viết chương trình nhập vào tháng, năm. Cho biết tháng đó có bao
+                nhiêu ngày. (bao gồm tháng của năm nhuận).
+              </p>
+              <div class="form-group row">
+                <div class="col-4">
+                  <input
+                    class="form-control"
+                    id="nhapThang1"
+                    placeholder="Nhập tháng"
+                    type="number"
+                  />
+                </div>
+                <div class="col-4">
+                  <input
+                    class="form-control"
+                    id="nhapNam1"
+                    placeholder="Nhập năm"
+                    type="number"
+                  />
+                </div>
+                <div class="col-4">
+                  <button class="btn btn-primary" id="btnTinhNgay">
+                    Tính ngày
+                  </button>
+                </div>
+              </div>
+              <div
+                class="form-group mt-2 alert alert-success"
+                id="ketQua_b2"
+              ></div>
+            </div>
+            <div class="tab-pane container fade" id="bai3">
+              <h3>Đọc số</h3>
+              <p>
+                Viết chương trình nhập vào số nguyên có 3 chữ số. In ra cách đọc
+                nó
+              </p>
+              <div class="form-group row">
+                <div class="col-4">
+                  <input
+                    class="form-control"
+                    id="nhap3So"
+                    placeholder="Nhập số 3 chữ số"
+                  />
+                </div>
+
+                <div class="col-4">
+                  <button class="btn btn-primary" id="btnDoc">Đọc</button>
+                </div>
+              </div>
+              <div
+                class="form-group mt-2 alert alert-success"
+                id="ketQua_b3"
+              ></div>
+            </div>
+            <div class="tab-pane container fade" id="bai4">
+              <h3>Tìm sinh viên xa trường nhất</h3>
+              <p>
+                Cho biết tên và tọa độ nhà của 3 sinh viên. Cho biết tọa độ của
+                trường đại học. Viết chương trình in tên sinh viên xa trường
+                nhất.
+              </p>
+              <div class="form-group row">
+                <!-- Sinh viên 1 -->
+                <div class="col-12">
+                  <h5>Sinh viên 1</h5>
+                </div>
+                <div class="col-4">
+                  <input
+                    class="form-control"
+                    id="nhapTen1"
+                    placeholder="Nhập tên"
+                  />
+                </div>
+                <div class="col-4">
+                  <input
+                    class="form-control"
+                    id="nhapToaDoX1"
+                    placeholder="Nhập tọa độ X"
+                  />
+                </div>
+                <div class="col-4">
+                  <input
+                    class="form-control"
+                    id="nhapToaDoY1"
+                    placeholder="Nhập tọa độ Y"
+                  />
+                </div>
+                <!-- Sinh viên 2 -->
+                <div class="col-12 mt-3">
+                  <h5>Sinh viên 2</h5>
+                </div>
+                <div class="col-4">
+                  <input
+                    class="form-control"
+                    id="nhapTen2"
+                    placeholder="Nhập tên"
+                  />
+                </div>
+                <div class="col-4">
+                  <input
+                    class="form-control"
+                    id="nhapToaDoX2"
+                    placeholder="Nhập tọa độ X"
+                  />
+                </div>
+                <div class="col-4">
+                  <input
+                    class="form-control"
+                    id="nhapToaDoY2"
+                    placeholder="Nhập tọa độ Y"
+                  />
+                </div>
+                <!-- Sinh viên 3 -->
+                <div class="col-12 mt-3">
+                  <h5>Sinh viên 3</h5>
+                </div>
+                <div class="col-4">
+                  <input
+                    class="form-control"
+                    id="nhapTen3"
+                    placeholder="Nhập tên"
+                  />
+                </div>
+                <div class="col-4">
+                  <input
+                    class="form-control"
+                    id="nhapToaDoX3"
+                    placeholder="Nhập tọa độ X"
+                  />
+                </div>
+                <div class="col-4">
+                  <input
+                    class="form-control"
+                    id="nhapToaDoY3"
+                    placeholder="Nhập tọa độ Y"
+                  />
+                </div>
+                <!-- Trường học -->
+                <div class="col-12 mt-3">
+                  <h5>Trường học</h5>
+                </div>
+
+                <div class="col-4">
+                  <input
+                    class="form-control"
+                    id="nhapToaDoX4"
+                    placeholder="Nhập tọa độ X"
+                  />
+                </div>
+                <div class="col-4">
+                  <input
+                    class="form-control"
+                    id="nhapToaDoY4"
+                    placeholder="Nhập tọa độ Y"
+                  />
+                </div>
+                <div class="col-12 mt-2">
+                  <button class="btn btn-primary" id="btnTim">Tìm</button>
+                </div>
+              </div>
+              <div
+                class="form-group mt-2 alert alert-success"
+                id="ketQua_b4"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
